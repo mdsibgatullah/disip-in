@@ -1,0 +1,19 @@
+{%- layout none -%}
+{%- paginate search.results by 20 -%}
+{%- assign is_first = true -%}
+[
+  {%- for item in search.results -%}
+    {%- if item.object_type == 'product' -%}
+      {%- unless is_first -%},{%- endunless -%}
+      {
+        "id":    {{ item.id             | json }},
+        "title": {{ item.title          | json }},
+        "url":   {{ item.url            | json }},
+        "price": {{ item.price_min      | json }},
+        "image": {{ item.featured_image | image_url: '100x100' | json }}
+      }
+      {%- assign is_first = false -%}
+    {%- endif -%}
+  {%- endfor -%}
+]
+{%- endpaginate -%}

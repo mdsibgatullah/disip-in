@@ -1,0 +1,158 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "custom_text_eHt4Yk": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "image": "shopify://shop_images/photo_2026-04-08_16-48-46.png",
+            "image_max": "200px",
+            "description": "<p>Enter your email below to be the first to know about new collections and product launches.</p>",
+            "width": "25%",
+            "order_first": false,
+            "open_default": false
+          }
+        },
+        "7527ffa4-1a31-4e5c-b642-96aa834daf84": {
+          "type": "menu",
+          "settings": {
+            "menu": "connect-with-us",
+            "title": "",
+            "width": "33%",
+            "order_first": false,
+            "open_default": true
+          }
+        },
+        "menu_mM4NGR": {
+          "type": "menu",
+          "disabled": true,
+          "settings": {
+            "menu": "policy",
+            "title": "Polices",
+            "width": "33%",
+            "order_first": false,
+            "open_default": false
+          }
+        },
+        "policy_links_mLbib8": {
+          "type": "policy_links",
+          "settings": {
+            "title": "Policies",
+            "width": "33%",
+            "order_first": false,
+            "open_default": false
+          }
+        },
+        "custom_text_CbwPzT": {
+          "type": "custom_text",
+          "settings": {
+            "title": "",
+            "image": "shopify://shop_images/To_be_Put_on_the_Footer_Right.png",
+            "image_max": "140px",
+            "description": "",
+            "width": "33%",
+            "order_first": false,
+            "open_default": false
+          }
+        }
+      },
+      "block_order": [
+        "custom_text_eHt4Yk",
+        "7527ffa4-1a31-4e5c-b642-96aa834daf84",
+        "menu_mM4NGR",
+        "policy_links_mLbib8",
+        "custom_text_CbwPzT"
+      ],
+      "custom_css": [
+        "@media (max-width: 767px) {.m-image-with-text__inner.m\\:flex.m\\:flex-wrap {padding-top: 20px; padding-bottom: 40px; } div#m-hero-template--21863472431320__image_with_text_2_wjW3HE {margin-bottom: 0 !important; } .m-hero--content-stack .m-hero__inner {position: absolute !important; } .template-index .m-footer.m-footer.m\\:block {border-top: 0 !important; }}",
+        ".block-image.m\\:blocks-radius-md {margin-left: auto;}",
+        "@media (max-width: 1024px) {.block-image.m\\:blocks-radius-md {margin-left: unset; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-b52dcc00-3fed-4575-998c-822e5342a32f",
+        "design": "footer-1",
+        "container": "container-full",
+        "bordered": false,
+        "copyright": "© Disip 2026",
+        "show_country_selector": false,
+        "show_currency_selector": false,
+        "show_language_selector": false,
+        "show_social_links": false,
+        "enable_follow_on_shop": true,
+        "show_payment_icons": true,
+        "payment_icons_width": 0,
+        "footer_bottom_color_scheme": "scheme-b52dcc00-3fed-4575-998c-822e5342a32f",
+        "footer_bottom_menu": "",
+        "show_menu_item_divider": false
+      }
+    },
+    "mobile-sticky-bar": {
+      "type": "mobile-sticky-bar",
+      "settings": {
+        "show_mobile_sticky": false,
+        "show_home_icon": true,
+        "show_collection_icon": true,
+        "show_cart_icon": true,
+        "show_search_icon": true,
+        "show_account_icon": false,
+        "show_wishlist_icon": false
+      }
+    },
+    "age-verifier-popup": {
+      "type": "age-verifier-popup",
+      "blocks": {
+        "block-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Confirm your age"
+          }
+        },
+        "block-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you 18 years old or older?</p>"
+          }
+        },
+        "block-3": {
+          "type": "buttons",
+          "settings": {
+            "decline_button": "No, I'm not",
+            "approve_button": "Yes, I am"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ],
+      "settings": {
+        "design_mode": false,
+        "enable": false,
+        "bg_blur": true,
+        "decline_heading": "Come back when you're older",
+        "decline_content": "<p>Sorry, the content of this store can't be seen by a younger audience. Come back when you're older.</p>",
+        "return_button": "Oops, I entered incorrectly"
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "mobile-sticky-bar",
+    "age-verifier-popup"
+  ]
+}

@@ -1,0 +1,274 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "7867d69c-9018-4e43-9ab1-c0dabc50ab83": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_saving": false,
+            "sale_badge_type": "percentage"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "size_title": "Size"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_atc_button": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "kwik_cod_checkout_buy_now_button_fiLLVA": {
+          "type": "shopify://apps/kwik-cod-checkout/blocks/buy_now_button/74f36c20-677c-4aa2-b179-1769aa61abaa",
+          "settings": {
+            "gkc_button_text": "Buy Now",
+            "gkc_button_subtext": "",
+            "gkc_button_bg": "#8c001c",
+            "gkc_text_color": "#ffffff",
+            "gk_image": true
+          }
+        },
+        "addons": {
+          "type": "addons",
+          "disabled": true,
+          "settings": {
+            "show_atcp": false,
+            "show_ask_a_question": false,
+            "show_social": false
+          }
+        },
+        "short_description_cbGpc8": {
+          "type": "short_description",
+          "settings": {}
+        },
+        "coupon_dB6tGf": {
+          "type": "coupon",
+          "disabled": true,
+          "settings": {
+            "heading": "Available Coupons"
+          }
+        },
+        "collapsible_tab_P9efm7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "content": "{{ product.metafields.custom.details | metafield_tag }}",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "collapsible_tab_G3zW8k": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Return",
+            "content": "<p>Dispatch in 1-2 business days.<br/>Free delivery pan-India.<br/>Delivery in 5-7 business days from order confirmation.<br/><br/>Returns:<br/>Returns accepted till 72 hours of delivery.<br/>Free returns.<br/>Tags should be intact in place.</p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "collapsible_tab_8FNRRi": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Your Signature Starts at the Top",
+            "content": "<p>From bold designs to minimal classics, find the cap that defines your personality and completes your vibe effortlessly.</p>",
+            "liquid": "",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "7867d69c-9018-4e43-9ab1-c0dabc50ab83",
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "kwik_cod_checkout_buy_now_button_fiLLVA",
+        "addons",
+        "short_description_cbGpc8",
+        "coupon_dB6tGf",
+        "collapsible_tab_P9efm7",
+        "collapsible_tab_G3zW8k",
+        "collapsible_tab_8FNRRi"
+      ],
+      "custom_css": [
+        "m-quantity-input.m-quantity {background: #fff;}",
+        ".m-product-wishlist.m\\:hidden {display: flex;}",
+        ".m-product-addon--wrapper.m\\:display-flex m-sharing {display: none;}",
+        "button.m-tooltip.m-button--icon.m-wishlist-button.m-tooltip--left {border: none;}",
+        "button.m-tooltip.m-button--icon.m-wishlist-button.m-tooltip--top.m-product-media--mobile__atwl-button.\\!md\\:m\\:hidden.m-tooltip--style-1 {display: none;}",
+        "button#ProductSubmitButton-template--21863480328408__main {background: transparent; color: #8c001b; font-weight: 600;}"
+      ],
+      "settings": {
+        "container": "w-full",
+        "layout": "layout-1",
+        "show_atwl": true,
+        "enable_history_state": true,
+        "enable_variant_group_images": false,
+        "disable_selected_variant_default": false,
+        "show_featured_media": true,
+        "show_zoom_button": true,
+        "enable_video_autoplay": false,
+        "show_nav_media_mobile": false,
+        "show_pagination_mobile": true,
+        "use_sticky_atc": false,
+        "use_sticky_atc_on_mobile": false,
+        "enable_dynamic_checkout": false,
+        "sticky_atc_wishtlist": false,
+        "sticky_atc_compare": false
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "header": "Product description"
+          }
+        }
+      },
+      "block_order": [
+        "description"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "default_open": true,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "container": "w-full",
+        "color_scheme": "",
+        "remove_params": false,
+        "heading": "You Might Also Like",
+        "heading_size": "h3",
+        "text_align": "left",
+        "limit": 20,
+        "columns": 4,
+        "column_gap": 30,
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "use_scroll_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 60,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "featured_collection_tPrTtq": {
+      "type": "featured-collection",
+      "custom_css": [
+        "{height: 0px; overflow: hidden;}"
+      ],
+      "name": "Featured collection",
+      "settings": {
+        "heading": "You Might Also Like",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "left",
+        "color_scheme": "",
+        "container": "container-fluid",
+        "collection": "cap",
+        "enable_flashsale": false,
+        "show_countdown": false,
+        "product_to_show": 4,
+        "items_per_row": 4,
+        "item_gap": 30,
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "hide_title": false,
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "show_button_on_header": false,
+        "button_type": "link",
+        "button_text": "",
+        "button_style": "m-button--primary",
+        "button_size": "",
+        "infinite_load": false,
+        "max_page_load": 3,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "item_gap_mobile": 16,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "recent-viewed-products": {
+      "type": "recent-viewed-products",
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "heading": "Recently Viewed Products",
+        "heading_size": "h3",
+        "text_align": "left",
+        "limit": 8,
+        "columns": 4,
+        "column_gap": 30,
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "hide_title": false,
+        "enable_slider": true,
+        "show_pagination": false,
+        "show_navigation": false,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "item_gap_mobile": 16,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-details-tabs",
+    "product-recommendations",
+    "featured_collection_tPrTtq",
+    "recent-viewed-products"
+  ]
+}

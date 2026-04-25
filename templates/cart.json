@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "cart-template",
+      "custom_css": [
+        ".m-cart__checkout {display: none;}",
+        ".m-cart {margin-bottom: 20px;}"
+      ],
+      "settings": {}
+    },
+    "1776674262d963260e": {
+      "type": "apps",
+      "blocks": {
+        "kwik_cod_checkout_checkout_button_Xf9PrM": {
+          "type": "shopify://apps/kwik-cod-checkout/blocks/checkout_button/74f36c20-677c-4aa2-b179-1769aa61abaa",
+          "settings": {
+            "gkc_button_text": "Checkout Now",
+            "gkc_button_subtext": "",
+            "gkc_button_bg": "#8c001c",
+            "gkc_text_color": "#ffffff",
+            "gk_image": true
+          }
+        }
+      },
+      "block_order": [
+        "kwik_cod_checkout_checkout_button_Xf9PrM"
+      ],
+      "custom_css": [
+        "button.gokwik-checkout-button {max-width: 419px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container",
+        "background_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "recent-viewed-products": {
+      "type": "recent-viewed-products",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "heading": "Recently Viewed Products",
+        "heading_size": "h3",
+        "text_align": "left",
+        "limit": 8,
+        "columns": 4,
+        "column_gap": 30,
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "hide_title": false,
+        "enable_slider": true,
+        "show_pagination": false,
+        "show_navigation": false,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "item_gap_mobile": 16,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1776674262d963260e",
+    "recent-viewed-products"
+  ]
+}

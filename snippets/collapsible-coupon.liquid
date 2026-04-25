@@ -1,0 +1,143 @@
+{% assign coupon_meta = product.metafields.custom.custom_coupon_codes.value %}
+
+<div class="m-collapsible m-coupon-snippet" data-coupon-wrapper>
+
+  <button class="m-collapsible--button" type="button" data-coupon-trigger>
+    <span>{{ title | default: 'Coupons' }}</span>
+    <span class="m-collapsible--icon">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M13.53 6.53L8.53 11.53c-.14.14-.32.22-.53.22s-.39-.08-.53-.22L2.47 6.53a.75.75 0 0 1 1.06-1.06L8 9.94l4.47-4.47a.75.75 0 1 1 1.06 1.06z" fill="currentColor"/>
+      </svg>
+    </span>
+  </button>
+
+  <div class="m-collapsible--content" data-coupon-content hidden>
+    <div class="m-collapsible--content__inner">
+      <div class="m-coupon-box">
+        <div class="m-coupon-row">
+          <input type="text" placeholder="Enter coupon code" class="m-coupon-input" />
+          <button type="button" class="m-coupon-btn">APPLY</button>
+        </div>
+        <div class="m-coupon-message"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.m-coupon-box { margin-top: 10px; }
+.m-coupon-row { display: flex; gap: 10px; }
+.m-coupon-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.m-coupon-btn {
+  padding: 10px 16px;
+  background: #8c001b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+.m-coupon-btn:hover { background: #e30048; }
+.m-coupon-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.m-coupon-message {
+  margin-top: 10px;
+  font-size: 13px;
+  display: none;
+}
+.m-coupon-message.visible {
+  display: block;
+  padding: 10px 12px;
+}
+.m-coupon-message.success {
+  color: #1a6e2e;
+  background: #e6f4ea;
+  border: 1px solid #a8d5b5;
+}
+.m-coupon-message.error {
+  color: #a10000;
+  background: #fdecea;
+  border: 1px solid #f5c2c2;
+}
+.m-coupon-message.loading {
+  color: #555;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+button.m-collapsible--button { font-size: 18px; }
+</style>
+
+<script>
+  let __COUPONS__ = {% if coupon_meta != blank %}{{ coupon_meta | json }}{% else %}[]{% endif %};
+  let __HANDLE__  = "{{ product.handle }}";
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  let coupons = Array.isArray(__COUPONS__) ? __COUPONS__ : [];
+  console.log('✅ Coupons loaded:', coupons);
+
+  document.querySelectorAll('[data-coupon-wrapper]').forEach(function(wrapper) {
+
+    let trigger = wrapper.querySelector('[data-coupon-trigger]');
+    let content = wrapper.querySelector('[data-coupon-content]');
+    let input   = wrapper.querySelector('.m-coupon-input');
+    let btn     = wrapper.querySelector('.m-coupon-btn');
+    let msg     = wrapper.querySelector('.m-coupon-message');
+
+    trigger.addEventListener('click', function () {
+      content.hidden = !content.hidden;
+    });
+
+    function showMessage(text, type) {
+      msg.innerHTML = text;
+      msg.className = 'm-coupon-message visible ' + type;
+    }
+
+    function hideMessage() {
+      msg.innerHTML = '';
+      msg.className = 'm-coupon-message';
+    }
+
+    input.addEventListener('input', function () {
+      hideMessage();
+      btn.disabled = false;
+    });
+
+    btn.addEventListener('click', function () {
+
+      let code = input.value.trim().toUpperCase();
+
+      if (!code) {
+        showMessage('⚠️ Please enter a coupon code.', 'error');
+        return;
+      }
+
+      let match = coupons.find(function(c) {
+        return c.code.toUpperCase() === code;
+      });
+
+      if (match) {
+        btn.disabled = true;
+        showMessage('⏳ Applying...', 'loading');
+
+        setTimeout(function() {
+          showMessage('✅ ' + match.message, 'success');
+
+        }, 100);
+
+      } else {
+        showMessage('❌ Invalid or expired coupon code.', 'error');
+      }
+
+    });
+
+  });
+
+});
+</script>

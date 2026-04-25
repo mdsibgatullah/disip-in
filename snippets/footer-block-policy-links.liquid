@@ -1,0 +1,188 @@
+<ul class="{% if block.settings.title != blank %}m-accordion--item-content{% endif %} sf__footer-block-content m-footer--block-content list-unstyled m-link-lists">
+  <div class="pb-5 md:pb-0">
+    <li class="link-lv2 m-link-lists--item m:block leading-8 hover-underline">
+      <a href="#" class="m-link policy-modal-trigger" data-policy-url="/policies/refund-policy" data-policy-title="Make a Return / Exchange">
+        {% comment %} Make a return/Exchange {% endcomment %}
+         Privacy Policy
+      </a>
+    </li>
+    <li class="link-lv2 m-link-lists--item m:block leading-8 hover-underline">
+      <a href="#" class="m-link policy-modal-trigger" data-policy-url="/policies/shipping-policy" data-policy-title="Shipping Policy">
+        {% comment %} Shipping policy {% endcomment %}
+         Shipping & Refund Policy
+      </a>
+    </li>
+
+    <li class="link-lv2 m-link-lists--item m:block leading-8 hover-underline">
+      <a href="#" class="m-link policy-modal-trigger" data-policy-url="/policies/refund-policy" data-policy-title="Refund / Exchange Policy">
+        {% comment %} Refund/Exchange policy {% endcomment %}
+         Terms & Services
+      </a>
+    </li>
+    
+  </div>
+</ul>
+
+<script>
+(function () {
+
+  // Build and inject modal directly into body — escapes all footer CSS
+  var modalHTML = `
+    <style>
+      #policy-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2147483647;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+      }
+      #policy-modal-box {
+        background: #fff;
+        color: #111;
+        width: 45vw;
+        min-height: 55vh;
+        max-height: 75vh;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+      }
+      #policy-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 32px;
+        border-bottom: 1px solid #e5e5e5;
+        flex-shrink: 0;
+      }
+      #policy-modal-title {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      #policy-modal-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      #policy-modal-body {
+        overflow-y: auto;
+        padding: 36px 32px;
+        flex: 1;
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: #333;
+      }
+      @media (max-width: 1024px) {
+        #policy-modal-box { width: 85vw; }
+      }
+      @media (max-width: 768px) {
+        #policy-modal-box {
+          width: 92vw;
+          min-height: 65vh;
+          max-height: 90vh;
+          border-radius: 8px;
+        }
+        #policy-modal-body { padding: 24px 18px; }
+        #policy-modal-header { padding: 16px 18px; }
+      }
+      @media (max-width: 480px) {
+        #policy-modal-box { width: 96vw; }
+      }
+    </style>
+
+    <div id="policy-modal-overlay">
+      <div id="policy-modal-box">
+        <div id="policy-modal-header">
+          <h2 id="policy-modal-title"></h2>
+          <button id="policy-modal-close" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <div id="policy-modal-body" data-lenis-prevent></div>
+      </div>
+    </div>
+  `;
+
+  // Inject into body only once
+  if (!document.getElementById('policy-modal-overlay')) {
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
+
+  function getEl(id) { return document.getElementById(id); }
+
+  function closeModal() {
+    getEl('policy-modal-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+    getEl('policy-modal-body').innerHTML = '';
+    getEl('policy-modal-title').textContent = '';
+  }
+
+  function openModal(url, title) {
+    var overlay = getEl('policy-modal-overlay');
+    var titleEl = getEl('policy-modal-title');
+    var bodyEl  = getEl('policy-modal-body');
+
+    titleEl.textContent = title;
+    bodyEl.innerHTML = '<p style="text-align:center;padding:60px 0;color:#aaa;font-size:0.9rem;">Loading...</p>';
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    fetch(url)
+      .then(function(res) { return res.text(); })
+      .then(function(html) {
+        var parser  = new DOMParser();
+        var doc     = parser.parseFromString(html, 'text/html');
+        var content =
+          doc.querySelector('.policy__body') ||
+          doc.querySelector('.rte')          ||
+          doc.querySelector('main');
+        bodyEl.innerHTML = content
+          ? content.innerHTML
+          : '<p style="color:#888;">Could not load content.</p>';
+      })
+      .catch(function() {
+        bodyEl.innerHTML = '<p style="color:#c00;">Something went wrong. <a href="' + url + '" target="_blank">Open page</a></p>';
+      });
+  }
+
+  document.addEventListener('click', function(e) {
+    var trigger = e.target.closest('.policy-modal-trigger');
+    if (!trigger) return;
+    e.preventDefault();
+    e.stopPropagation();
+    openModal(
+      trigger.getAttribute('data-policy-url'),
+      trigger.getAttribute('data-policy-title')
+    );
+  });
+
+  document.addEventListener('click', function(e) {
+    var overlay  = getEl('policy-modal-overlay');
+    var closeBtn = getEl('policy-modal-close');
+    if (!overlay || overlay.style.display !== 'flex') return;
+    if (closeBtn && (e.target === closeBtn || closeBtn.contains(e.target))) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+})();
+</script>
