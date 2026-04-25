@@ -14,19 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "custom_text_eHt4Yk": {
-          "type": "custom_text",
-          "disabled": true,
-          "settings": {
-            "title": "",
-            "image": "shopify://shop_images/photo_2026-04-08_16-48-46.png",
-            "image_max": "200px",
-            "description": "<p>Enter your email below to be the first to know about new collections and product launches.</p>",
-            "width": "25%",
-            "order_first": false,
-            "open_default": false
-          }
-        },
         "7527ffa4-1a31-4e5c-b642-96aa834daf84": {
           "type": "menu",
           "settings": {
@@ -35,17 +22,6 @@
             "width": "33%",
             "order_first": false,
             "open_default": true
-          }
-        },
-        "menu_mM4NGR": {
-          "type": "menu",
-          "disabled": true,
-          "settings": {
-            "menu": "policy",
-            "title": "Polices",
-            "width": "33%",
-            "order_first": false,
-            "open_default": false
           }
         },
         "policy_links_mLbib8": {
@@ -71,9 +47,7 @@
         }
       },
       "block_order": [
-        "custom_text_eHt4Yk",
         "7527ffa4-1a31-4e5c-b642-96aa834daf84",
-        "menu_mM4NGR",
         "policy_links_mLbib8",
         "custom_text_CbwPzT"
       ],
@@ -92,7 +66,7 @@
         "show_currency_selector": false,
         "show_language_selector": false,
         "show_social_links": false,
-        "enable_follow_on_shop": true,
+        "enable_follow_on_shop": false,
         "show_payment_icons": true,
         "payment_icons_width": 0,
         "footer_bottom_color_scheme": "scheme-b52dcc00-3fed-4575-998c-822e5342a32f",
@@ -102,6 +76,7 @@
     },
     "mobile-sticky-bar": {
       "type": "mobile-sticky-bar",
+      "disabled": true,
       "settings": {
         "show_mobile_sticky": false,
         "show_home_icon": true,
@@ -114,32 +89,7 @@
     },
     "age-verifier-popup": {
       "type": "age-verifier-popup",
-      "blocks": {
-        "block-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Confirm your age"
-          }
-        },
-        "block-2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Are you 18 years old or older?</p>"
-          }
-        },
-        "block-3": {
-          "type": "buttons",
-          "settings": {
-            "decline_button": "No, I'm not",
-            "approve_button": "Yes, I am"
-          }
-        }
-      },
-      "block_order": [
-        "block-1",
-        "block-2",
-        "block-3"
-      ],
+      "disabled": true,
       "settings": {
         "design_mode": false,
         "enable": false,

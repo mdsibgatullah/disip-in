@@ -12,14 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "7867d69c-9018-4e43-9ab1-c0dabc50ab83": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "body"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -56,31 +48,15 @@
             "gk_image": true
           }
         },
-        "addons": {
-          "type": "addons",
-          "disabled": true,
-          "settings": {
-            "show_atcp": false,
-            "show_ask_a_question": false,
-            "show_social": false
-          }
-        },
         "short_description_cbGpc8": {
           "type": "short_description",
           "settings": {}
         },
-        "coupon_dB6tGf": {
-          "type": "coupon",
-          "disabled": true,
-          "settings": {
-            "heading": "Available Coupons"
-          }
-        },
-        "collapsible_tab_P9efm7": {
+        "collapsible_tab_x444VV": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Details",
-            "content": "{{ product.metafields.custom.details | metafield_tag }}",
+            "content": "{{ product.description }}",
             "liquid": "",
             "default_open": false
           }
@@ -93,31 +69,17 @@
             "liquid": "",
             "default_open": false
           }
-        },
-        "collapsible_tab_8FNRRi": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Your Signature Starts at the Top",
-            "content": "<p>From bold designs to minimal classics, find the cap that defines your personality and completes your vibe effortlessly.</p>",
-            "liquid": "",
-            "default_open": false
-          }
         }
       },
       "block_order": [
-        "7867d69c-9018-4e43-9ab1-c0dabc50ab83",
         "title",
         "price",
         "variant_picker",
         "buy_buttons",
         "kwik_cod_checkout_buy_now_button_fiLLVA",
-        "addons",
         "short_description_cbGpc8",
-        "coupon_dB6tGf",
-        "collapsible_tab_P9efm7",
-        "collapsible_tab_G3zW8k",
-        "collapsible_tab_8FNRRi"
+        "collapsible_tab_x444VV",
+        "collapsible_tab_G3zW8k"
       ],
       "custom_css": [
         "m-quantity-input.m-quantity {background: #fff;}",
@@ -234,41 +196,12 @@
         "custom_class": "",
         "animations": "inherit"
       }
-    },
-    "recent-viewed-products": {
-      "type": "recent-viewed-products",
-      "disabled": true,
-      "settings": {
-        "container": "container",
-        "color_scheme": "",
-        "heading": "Recently Viewed Products",
-        "heading_size": "h3",
-        "text_align": "left",
-        "limit": 8,
-        "columns": 4,
-        "column_gap": 30,
-        "pcard_layout": "",
-        "pcard_image_ratio": "",
-        "show_vendor": false,
-        "hide_title": false,
-        "enable_slider": true,
-        "show_pagination": false,
-        "show_navigation": false,
-        "mobile_disable_slider": false,
-        "use_scroll_mobile": true,
-        "item_gap_mobile": 16,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "custom_class": "",
-        "animations": "inherit"
-      }
     }
   },
   "order": [
     "main",
     "product-details-tabs",
     "product-recommendations",
-    "featured_collection_tPrTtq",
-    "recent-viewed-products"
+    "featured_collection_tPrTtq"
   ]
 }

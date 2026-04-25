@@ -37,9 +37,9 @@
         "link": "",
         "link_2": "",
         "second_image_offset_top": 10,
-        "title": "Image with text",
+        "title": "The Beginning",
         "sub_title": "",
-        "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+        "text": "<p>It all started with a thought. Why does all other fashion products such as t-shirts, jeans, hoodies, sneakers have been explored so much, but for caps, we still have the old generic caps that was the same 20 years ago. No one had put any effort into re-inventing the cap and making the modern version of it. That's where we enter.</p>",
         "text_size": "medium",
         "content_alignment": "left",
         "button_label": "",
@@ -76,9 +76,9 @@
         "link": "",
         "link_2": "",
         "second_image_offset_top": 10,
-        "title": "Image with text",
+        "title": "The Uniqueness",
         "sub_title": "",
-        "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+        "text": "<p>There are only very few brands that can call themselves exclusively a Cap brand. We will keep presenting to you the best quality of materials and the most unique & lavish designs that you'd have never seen before. We're here to change the market and your wardrobe. </p>",
         "text_size": "medium",
         "content_alignment": "left",
         "button_label": "",
@@ -97,7 +97,7 @@
         "text_HQ6bFh": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.<br/> Add details on availability, style, or even provide a review.</p>"
+            "text": "<p> Having a cap that suits you and your outfit elevates your look to a different level.<br/> Your Head Needs A Hug!</p>"
           }
         }
       },
