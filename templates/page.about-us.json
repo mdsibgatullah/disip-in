@@ -33,13 +33,13 @@
         "show_image_reverse": false,
         "hover_effect": false,
         "image_animation": "none",
-        "image": "shopify://shop_images/6_2nd_Banner_after_the_products.webp",
+        "image": "shopify://shop_images/Cap1_Shaasak.webp",
         "link": "",
         "link_2": "",
         "second_image_offset_top": 10,
-        "title": "The Beginning",
+        "title": "Your Head Needs A Hug",
         "sub_title": "",
-        "text": "<p>It all started with a thought. Why does all other fashion products such as t-shirts, jeans, hoodies, sneakers have been explored so much, but for caps, we still have the old generic caps that was the same 20 years ago. No one had put any effort into re-inventing the cap and making the modern version of it. That's where we enter.</p>",
+        "text": "<p>We believe caps are long overdue for a glow-up. Not a “new logo, same cap” situation. A real upgrade — in design, personality & detail.</p><p>The goal is simple: to make caps feel as exclusive as they look.</p><p>A cap can change the entire energy of an outfit. It can make basic feel styled, casual feel expensive, and “I just threw this on” feel like a lie everyone respects.</p>",
         "text_size": "medium",
         "content_alignment": "left",
         "button_label": "",
@@ -72,13 +72,13 @@
         "show_image_reverse": false,
         "hover_effect": false,
         "image_animation": "none",
-        "image": "shopify://shop_images/8_Laptop_-_Last_Pic_before_Footer_ea7c07e2-d1d8-41c2-a249-4a3f36c7787f.webp",
+        "image": "shopify://shop_images/Cap1_Shaasak_2.webp",
         "link": "",
         "link_2": "",
         "second_image_offset_top": 10,
-        "title": "The Uniqueness",
+        "title": "Loud Without Shouting",
         "sub_title": "",
-        "text": "<p>There are only very few brands that can call themselves exclusively a Cap brand. We will keep presenting to you the best quality of materials and the most unique & lavish designs that you'd have never seen before. We're here to change the market and your wardrobe. </p>",
+        "text": "<p>Every Disip cap is handcrafted with care, precision, and a mildly unhealthy obsession with details. From the structure to the stitching, from the fabric to the finish, everything is built to feel premium, look sharp, and sit on your head like it pays rent there.</p><p>We don’t mass-produce vibes.</p>",
         "text_size": "medium",
         "content_alignment": "left",
         "button_label": "",
@@ -97,7 +97,7 @@
         "text_HQ6bFh": {
           "type": "text",
           "settings": {
-            "text": "<p> Having a cap that suits you and your outfit elevates your look to a different level.<br/> Your Head Needs A Hug!</p>"
+            "text": "<p>Not loud. <br/>Not regular. <br/>Not for everyone.</p><p>Exactly how we like it!</p>"
           }
         }
       },

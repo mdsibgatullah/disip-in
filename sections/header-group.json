@@ -67,7 +67,8 @@
       ],
       "custom_css": [
         "img {object-position: left;}",
-        " {position: sticky; height: 410px; z-index: -1;}"
+        " {position: sticky; height: 410px; z-index: -1;}",
+        "section#m-slider-sections--21863482392792__slider_azXrjU {height: 425px; overflow: hidden;}"
       ],
       "name": "Slideshow",
       "settings": {

@@ -22,6 +22,7 @@
       "blocks": {
         "kwik_cod_checkout_checkout_button_Xf9PrM": {
           "type": "shopify://apps/kwik-cod-checkout/blocks/checkout_button/74f36c20-677c-4aa2-b179-1769aa61abaa",
+          "disabled": true,
           "settings": {
             "gkc_button_text": "Checkout Now",
             "gkc_button_subtext": "",

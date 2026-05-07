@@ -708,7 +708,10 @@
                     data-terms-action disabled
                   {% endif %}
                 >
-                  {{- form | payment_button -}}
+                  {% comment %} {{- form | payment_button -}} {% endcomment %}
+                   <div class="shopify-payment-button">
+{% render 'gokwik-buy-now' %}
+</div>
                 </div>
               {% endif %}
             </div>

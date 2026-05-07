@@ -209,7 +209,7 @@
               </div>
               {% assign show_terms = true %}
             {% endif %}
-            <button
+            {% comment %} <button
               type="submit"
               form="cart-drawer-form"
               class="m-button m-button--primary m:w-full"
@@ -219,7 +219,8 @@
               {% endif %}
             >
               <span>{{ 'cart.general.checkout' | t }}</span>
-            </button>
+            </button> {% endcomment %}
+            {%render 'gokwik-checkout' %}
             {%- if settings.cart_drawer_show_accelerated_button and additional_checkout_buttons -%}
               <div class="additional-checkout-buttons m:w-full">
                 {{ content_for_additional_checkout_buttons }}

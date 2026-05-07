@@ -22,6 +22,7 @@
   <div class="{{ container }}{% if has_bg == false %} m-section-my{% else %} m-section-py{% endif %}">
     {% render 'index-section-header', section_settings: section.settings %}
     <div class="m-app-section__content">
+      {% render 'gokwik-checkout' %}
       {% for block in section.blocks %}
         {% render block %}
       {% endfor %}
