@@ -4,7 +4,19 @@
 
 *Premium streetwear brand. 100% custom theme. Zero boilerplate.*
 
-![DISIP Store](disip1.png)
+<table>
+  <tr>
+    <td>
+      <img src="git-details/disip1.png" alt="DISIP Store">
+    </td>
+    <td>
+      <img src="git-details/disip2.png" alt="DISIP Store">
+    </td>
+    <td>
+      <img src="git-details/disip3.png" alt="DISIP Store">
+    </td>
+  </tr>
+</table>
 
 </div>
 
@@ -51,7 +63,7 @@ JSON templates were used throughout, which keeps the template files lean and pus
 
 ### Homepage
 
-![Homepage](disip1.png)
+![Homepage](git-details/disip1.png)
 
 Built as a sequence of independent sections rather than one monolithic template. This gives the client full drag-and-drop control over layout order while I retain full control over each component's design.
 
@@ -65,7 +77,7 @@ Notable implementations:
 
 ### Product Page
 
-![Product Page](disip2.png)
+![Product Page](git-details/disip2.png)
 
 The product page was designed around DISIP's content — long editorial photos that deserve full-width treatment. The layout splits into a scrollable image column on the left and a sticky info panel on the right, built with CSS Grid.
 
@@ -85,7 +97,7 @@ A fully custom search component built as a Liquid snippet — `custom-search-box
 
 ### Policy Modal System
 
-![Policy Modal](disip3.png)
+![Policy Modal](git-details/disip3.png)
 
 Instead of sending users to a separate `/policies/` page, all policy content (Privacy Policy, Shipping Policy, Return & Refund, Terms of Service) loads in an in-page modal. The modal is triggered from footer links, keeping users on the storefront rather than bouncing them to a plain Shopify policy page.
 
