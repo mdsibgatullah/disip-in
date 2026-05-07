@@ -12,6 +12,8 @@
     <td>
       <img src="git-details/disip2.png" alt="DISIP Store">
     </td>
+  </tr>
+  <tr>
     <td>
       <img src="git-details/disip3.png" alt="DISIP Store">
     </td>
