@@ -4,7 +4,7 @@
 
 *Premium streetwear brand. 100% custom theme. Zero boilerplate.*
 
-![DISIP Store](disip1.png)
+![DISIP Store](git-details/disip1.png)
 
 </div>
 
