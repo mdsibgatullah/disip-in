@@ -17,9 +17,6 @@
     </td>
   </tr>
 </table>
-
-</div>
-
 ---
 
 ## Overview
